@@ -28,8 +28,6 @@
 
         closeAlert.focus()
 
-
-
         function hideErrorMessage() {
             console.log("Clicado fechar")
             feedbackMessage.classList.remove("show");
@@ -39,28 +37,18 @@
             if (typeof cb === "function") {
                 cb()
             }
-
         }
 
         function pressedKeyboardOnBtn(e) {
 
             if(e.keyCode === 27) {
                 hideErrorMessage()
-            }
-            
-
+            }          
         }
 
         closeAlert.addEventListener("click", hideErrorMessage) 
-        closeAlert.addEventListener("keyup", pressedKeyboardOnBtn)
-
-
-        
+        closeAlert.addEventListener("keyup", pressedKeyboardOnBtn)        
     }
-
-
-    
-
 
 
     formCadastro.addEventListener("submit", function(e){
@@ -92,10 +80,5 @@
         
         btn.disabled = !this.checked;
     })
-
-    
-
-
-
         
 })()
